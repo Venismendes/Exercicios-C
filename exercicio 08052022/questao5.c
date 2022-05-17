@@ -3,7 +3,7 @@
 
 int main(void) {
 
-char gabarito[5];
+char gabarito[6];
 int i;
 printf("Digite as respostas do gabarito a seguir.\n");
 for(i=0; i<5; i++){
@@ -20,7 +20,7 @@ float notas[quantidade_alunos];
 
 int contador;
 float nota;
-char resposta;
+char resposta[2];
 printf("Preencha os cartoes de respostas a seguir.\n");
 for(i=0; i<quantidade_alunos; i++){
     nota = 0.0;
@@ -28,8 +28,8 @@ for(i=0; i<quantidade_alunos; i++){
     scanf("%d", &alunos[i]);
     for(contador=0; contador<5; contador++){
         printf("Resposta do aluno na questao %d: ", contador+1);
-        scanf("%s", &resposta);
-        if(resposta == gabarito[contador]){
+        scanf("%s", &resposta[0]);
+        if(resposta[0] == gabarito[contador]){
             nota = nota + 2.0;
         }
     }
@@ -37,7 +37,7 @@ for(i=0; i<quantidade_alunos; i++){
 }
 
 for(i=0; i<quantidade_alunos; i++){
-    printf("Nota do aluno %d é igual a %f", alunos[i], notas[i]);
+    printf("Nota do aluno %d: %f\n", alunos[i], notas[i]);
 }
 
 return 0;
