@@ -12,17 +12,18 @@ scanf("%d", &num1);
 printf("Digite outro numero: ");
 scanf("%d", &num2);
 
-char operacao;
+char operacao[2];
 printf("Digite qual das operacoes [+, -, /, *] deseja executar: ");
 scanf("%s", &operacao);
 
-if(operacao == '+'){
+if(operacao[0] == '+'){
     printf("%d + %d = %d", num1, num2, num1+num2);
-} else if (operacao == '-') {
+} else if (operacao[0] == '-') {
     printf("%d - %d = %d", num1, num2, num1-num2);
-} else if (operacao == '/') {
-    printf("%d / %d = %d", num1, num2, num1/num2);
-} else if (operacao == '*') {
+} else if (operacao[0] == '/') {
+    float div = num1 / num2;
+    printf("%d / %d = %f", num1, num2, div);
+} else if (operacao[0] == '*') {
     printf("%d * %d = %d", num1, num2, num1*num2);
 }
 return 0;}
