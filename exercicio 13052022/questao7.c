@@ -15,7 +15,7 @@ for(i=0; i<100; i++){
     scanf("%d", &vetor[i]);
 }
 
-int maior = vetor[9];
+int maior = vetor[99];
 for(i=0; i<100; i++){
     if (vetor[i] > maior){
         maior = vetor[i];
